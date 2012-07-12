@@ -1,0 +1,30 @@
+<head>
+  <title>BlockvBlock</title>
+  <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="wrap">
+		<canvas id="canvas" height="400" width="1000"></canvas>
+		<br /><br/>
+		{{> leaderboard}}
+	</div>
+</body>
+
+<template name="leaderboard">
+	<table width="100%">
+		<tr>
+			<td>Player</td>
+			<td>Squares</td>
+		</tr>
+		{{#each players}}
+			{{> player}}
+		{{/each}}
+	</table>
+</template>
+
+<template name="player">
+  <tr class="player">
+    <td class="name">{{name}}</td>
+    <td class="score">{{score}}</td>
+  </tr>
+</template>
